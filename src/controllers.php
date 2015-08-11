@@ -66,6 +66,7 @@ $app->post('/register', function (Request $request) use ($app) {
         $mailer = Swift_Mailer::newInstance($transport);
         $mailer->send($msg);
     } catch (Swift_TransportException $e) {
+        $app['monolog']->addEmergency($e->getMessage());
         // ...
     }
 
