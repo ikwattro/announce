@@ -69,7 +69,7 @@ $app->post('/register', function (Request $request) use ($app) {
         // ...
     }
 
-    return $app->redirect('/');
+    return $app->redirect('/thankyou');
 })
 ->bind('register')
 ;
