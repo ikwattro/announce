@@ -1,0 +1,29 @@
+body {
+    font-family: 'Lato','sans-serif';
+    text-align: center;
+}
+
+.container {
+    margin-top:80px;
+}
+
+h1 {
+    font-size: 50px;
+    color: #6ed3cf;
+    font-weight: bold;
+}
+
+#send-email-btn {
+    margin-top: 10px;
+    background: rgba(110, 211, 207, 0.4);
+}
+
+.navbar-octify {
+    background: #3fb0ac;
+    border-bottom: 1px solid #d2d6d5;
+}
+
+.navbar-octify a.navbar-brand {
+    color: #fff;
+    font-weight: bolder;
+}
