@@ -65,6 +65,7 @@ $app->post('/register', function (Request $request) use ($app) {
           ->setPassword('error!2101CWX');
         $mailer = Swift_Mailer::newInstance($transport);
         $mailer->send($msg);
+        $app['monolog']->addDebug('new registration ' . $email);
     } catch (Swift_TransportException $e) {
         $app['monolog']->addEmergency($e->getMessage());
         // ...

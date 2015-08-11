@@ -14,6 +14,9 @@ $app->register(new ValidatorServiceProvider());
 $app->register(new ServiceControllerServiceProvider());
 $app->register(new TwigServiceProvider());
 $app->register(new HttpFragmentServiceProvider());
+$app->register(new Silex\Provider\MonologServiceProvider(), array(
+  'monolog.logfile' => __DIR__.'/../var/logs/development.log',
+));
 $app['twig'] = $app->extend('twig', function ($twig, $app) {
     // add custom globals, filters, tags, ...
 
